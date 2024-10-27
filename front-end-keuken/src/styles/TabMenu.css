@@ -1,0 +1,22 @@
+.tab-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #d32f2f;
+    color: white;
+    padding: 1rem;
+  }
+  
+  button {
+    flex: 1;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button.active {
+    background-color: #b71c1c;
+  }
+  
