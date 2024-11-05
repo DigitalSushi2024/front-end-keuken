@@ -34,6 +34,6 @@
   </script>
   
   <style scoped>
-  @import "../styles/OrderCard.css"; /* Adjusted path */
+  @import "../styles/OrderCard.css";
   </style>
   

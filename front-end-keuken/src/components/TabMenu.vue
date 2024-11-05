@@ -25,6 +25,6 @@
   </script>
   
   <style scoped>
-  @import "../styles/TabMenu.css"; /* Adjusted path */
+  @import "../styles/TabMenu.css";
   </style>
   
