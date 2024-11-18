@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Order Page</h1>
     <TabMenu :activeTab="activeTab" @change-tab="changeTab" />
     <div class="orders-container">
       <OrderCard
@@ -39,45 +40,6 @@ export default {
             {id: 4, quantity: 1, name: "Ebi tempura", completed: false}
           ],
           status: "Open"
-        },
-        {
-          id: 2,
-          table: 5,
-          orderId: "#579KL12",
-          orderTime: "17:12:30",
-          duration: "12:10",
-          items: [
-            {id: 1, quantity: 2, name: "Salmon sushi", completed: true},
-            {id: 2, quantity: 1, name: "Tuna roll", completed: false},
-            {id: 3, quantity: 1, name: "Edamame", completed: false}
-          ],
-          status: "Open"
-        },
-        {
-          id: 3,
-          table: 7,
-          orderId: "#340YN45",
-          orderTime: "17:15:45",
-          duration: "8:45",
-          items: [
-            {id: 1, quantity: 1, name: "Avocado roll", completed: true},
-            {id: 2, quantity: 2, name: "Spicy tuna roll", completed: true},
-            {id: 3, quantity: 1, name: "Miso soup", completed: false}
-          ],
-          status: "Open"
-        },
-        {
-          id: 4,
-          table: 8,
-          orderId: "#673UI90",
-          orderTime: "17:18:20",
-          duration: "10:20",
-          items: [
-            {id: 1, quantity: 3, name: "California roll", completed: false},
-            {id: 2, quantity: 1, name: "Tempura shrimp", completed: false},
-            {id: 3, quantity: 1, name: "Gyoza", completed: true}
-          ],
-          status: "Open"
         }
       ]
     };
@@ -103,8 +65,6 @@ export default {
 </script>
 
 <style scoped>
-@import "../styles/OrderPage.css";
-
 .orders-container {
   display: flex !important;
   flex-wrap: wrap;

@@ -1,27 +1,21 @@
 <template>
-    <div id="app">
-      <OrderPage />
-    </div>
-  </template>
-  
-  <script>
-  import OrderPage from './views/OrderPage.vue';
-  import "@/styles/global.css"; // Dit importeert de globale stijlen
+  <div id="app">
+    <router-view /> <!-- Dynamically renders the active route -->
+  </div>
+</template>
 
-  export default {
-    components: {
-      OrderPage
-    }
-  };
-  </script>
-  
-  <style>
-  /* Basis CSS */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  </style>
-  
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
+<style>
+/* Basis CSS */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+</style>
