@@ -1,31 +1,31 @@
 <template>
-    <div :class="['order-card', order.status.toLowerCase()]">
-      <div :class="['order-header', getDurationClass()]">
-        <div class="order-header">
-          <h3>Table {{ order.table }}</h3>
-          <span>{{ order.orderId }}</span>
-        </div>
-        <div class="order-time">
-          <span>{{ order.orderTime }}</span>
-          <span>{{ order.duration }}</span>
-        </div>
+  <div :class="['order-card', order.status.toLowerCase()]">
+    <div :class="['order-header', getDurationClass()]">
+      <div class="header-info">
+        <p class="tablenr">Table {{ order.table }}</p>
+        <span>{{ order.orderId }}</span>
       </div>
-      <ul class="order-items">
-        <li v-for="item in order.items" :key="item.id">
-          <span>{{ item.quantity }}x</span>
-          <span>{{ item.name }}</span>
-          <input 
-            type="checkbox" 
-            :checked="item.completed" 
-            @change="$emit('toggle-item', item.id)" 
-          />
-        </li>
-      </ul>
-      <button class="done-button" @click="$emit('toggle-status')">
-        {{ order.status === 'Open' ? 'Done' : 'Undo' }}
-      </button>
+      <div class="header-time">
+        <span>{{ order.orderTime }}</span>
+        <span>{{ order.duration }}</span>
+      </div>
     </div>
-  </template>
+    <ul class="order-items">
+      <li v-for="item in order.items" :key="item.id">
+        <span>{{ item.quantity }}x</span>
+        <span>{{ item.name }}</span>
+        <input
+            type="checkbox"
+            :checked="item.completed"
+            @change="$emit('toggle-item', item.id)"
+        />
+      </li>
+    </ul>
+    <button class="done-button" @click="$emit('toggle-status')">
+      {{ order.status === 'Open' ? 'Done' : 'Undo' }}
+    </button>
+  </div>
+</template>
   
   <script>
   export default {
