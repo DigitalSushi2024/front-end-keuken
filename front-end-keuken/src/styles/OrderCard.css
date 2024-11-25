@@ -1,23 +1,49 @@
 .order-card {
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0;
   margin: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 22%; /* Adjust width to fit four cards in a row */
-  min-width: 250px; /* Ensures cards do not get too small */
+  width: 20em;
+  font-family: "Roboto", serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .order-header {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
+  align-items: center;
+  font-weight: 400;
+  padding: 0.5rem;
+  margin: 0rem 0rem 0.5rem 0rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: auto;
+  color: white;
+  height: 4em;
 }
 
 .order-time {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: right;
   color: #555;
+  color: white;
 }
+
+.green-header {
+  background-color: #6CBB68;
+}
+
+.orange-header {
+  background-color: #FFB320;
+}
+
+.red-header {
+  background-color: #DB2D1D;
+}
+
 
 .order-items {
   margin-top: 1rem;
@@ -37,18 +63,18 @@
   background-color: #e0e0e0;
 }
 
-button {
+.done-button {
   width: 100%;
   padding: 0.5rem;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
-  color: white;
-  background-color: #4caf50;
-  transition: background-color 0.3s ease;
+  color: black;
+  background-color: #ECEBEB;
+  margin: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-button:hover {
-  background-color: #388e3c;
+.done-button:hover {
+  background-color: #ccc;
 }

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Order Page</h1>
     <TabMenu :activeTab="activeTab" @change-tab="changeTab" />
     <div class="orders-container">
       <OrderCard
